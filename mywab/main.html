@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>日用百货</title>
+<!--计算时间-->
+<script>document.addEventListener("DOMContentLoaded",function () {CountDownShort();var i =window.setInterval(function () {if (new Date().getSeconds() ==0) {window.clearInterval(i);CountDownShort();window.setInterval(CountDownShort,60000);}
+},1000);});function CountDownShort() {var a =document.getElementsByClassName("CDScontainer");if (a.length ==0) {return;}
+var ct =new Date().getTime() / 1000;for (var i =0;i<a.length;i++) {var s =parseInt(a[i].getAttribute("data-time"),10);if (s >ct) {var delta =s - ct;var t ="";if (delta >86400) {t +=Math.floor(delta / 86400) + "天";delta =delta % 86400;}
+if (delta >3600) {t +=Math.floor(delta / 3600) + "小时";delta =delta % 3600;}
+if (delta >60) {t +=Math.floor(delta / 60) + "分钟";}
+a[i].innerHTML =t;} else {if (a[i].innerHTML !="") {a[i].innerHTML ="";}
+}
+}
+}
+</script>
+<script>document.addEventListener("DOMContentLoaded",function () {Date.prototype.Format =function (format) {var fmt =format[1];var o ={"M+":this.getMonth() + 1,"d+":this.getDate(),"h+":this.getHours(),"m+":this.getMinutes(),"s+":this.getSeconds(),"q+":Math.floor((this.getMonth() + 3) / 3),S:this.getMilliseconds(),D:format[this.getDay() + 2],};if (/(y+)/.test(fmt))
+fmt =fmt.replace(RegExp.$1,(this.getFullYear() + "").substr(4 - RegExp.$1.length)
+);for (var k in o)
+if (new RegExp("(" + k + ")").test(fmt))
+fmt =fmt.replace(RegExp.$1,RegExp.$1.length ==1
+?o[k]
+:("00" + o[k]).substr(("" + o[k]).length)
+);return fmt;};widgetTimeUpdater();var timeInterval =window.setInterval(function () {if (new Date().getSeconds() ==0) {window.clearInterval(timeInterval);widgetTimeUpdater();console.log(window.setInterval(widgetTimeUpdater,60000));}
+},1000);});function widgetTimeUpdater() {var clockArray =document.getElementsByClassName("wgTimeClock");var offset_GMT =new Date().getTimezoneOffset();var nowDate =new Date().getTime();for (var i =0;i<clockArray.length;i++) {clockArray[i].innerHTML =new Date(nowDate +
+offset_GMT *60 *1000 +
+clockArray[i].id.split(",")[0] *60 *60 *1000
+).Format(clockArray[i].id.split(","));}
+}</script>
+
+<!--轮播css-->
+<style>
+    *{
+    margin:3px;
+    padding:0;
+    font-size:13px;
+    }
+    body{
+	font-size:12px;
+	color:#333333;
+	text-align:center;
+	font-family:'宋体',arial,verdana,sans-serif;
+	margin-top: 8px;
+	background-color: #FFCC00;
+    }
+    .jdt {
+    border: 0px solid #CCCCCC;
+    padding:0;
+    text-align:center;
+    width:780px;
+    border-collapse:collapse;
+    }
+    b:link {
+    color: #333333;
+    text-decoration: none;
+    }
+    b:visited {
+    color: #333333;
+    text-decoration: none;
+    }
+    b:hover {
+    color: #FF6600;
+    text-decoration: underline;
+    }
+    b:active {
+    text-decoration: none;
+    }
+
+    .index_page{
+    float:right;
+    display:block;
+    height:16px;
+    padding:0px 0;
+    margin-right:4px;
+    }
+    .index_page *{
+    float:left;
+    display:inline;
+    line-height:16px;
+    border:0px solid #B6CFCD;
+    text-align:center;
+    padding:0;margin:0 2px;}
+    .index_page strong{
+    background:#009A91;
+    color:#fff;
+    width:16px;
+    }
+   .index_page span{
+    color:#009a91;
+    padding:3px 0 0 0;
+    border:0;
+    cursor:pointer;
+    }
+    .index_page a{
+    width:16px;
+    color:#009A91;
+    text-decoration:none;
+    }
+</style>
+
+
+<!--横向列表-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css"> 
+#menu2{
+	width:726px; 
+	height: 26px;
+	margin:0px auto;
+	border: 0px solid #999; 
+}
+#menu2 ul{
+	margin: 0px; 
+	padding: 0px; 
+	list-style: none; /*隐藏默认列表符号*/	
+}
+#menu2 ul li{
+	background:#FFFF99;
+	height: 26px;
+ 	line-height: 26px; /*行距*/
+	text-align:center;
+	border-right: 0px solid #999; 	
+	position:relative;
+	width:120px;
+	float:left;
+}
+a{
+	display:block; 
+	font-size: 13px;
+	color: #FFF;
+	text-decoration: none;/*隐藏超链接默认下划线*/ 	
+}
+a:hover{
+	color: #F00;
+	font-size: 14px;
+}
+#menu2 ul li ul{
+	display:none; /*默认隐藏*/
+	top: 26px;
+	width:100px; 
+	border:0px solid #ccc; 
+	border-bottom:none;
+    position:absolute; 
+	left: 0px;	
+}
+#menu2 ul li:hover ul{
+    display:block;
+}
+#menu2 ul li:hover ul li a{
+	display:block;
+}
+
+
+<!--纵向列表-->
+
+
+</style>
+<style type="text/css"> 
+#menu{
+	width: 200px; 
+	border: 0px solid #999; 	
+}
+#menu ul{
+	margin: 0px; 
+	padding: 0px; 
+	list-style: none; /*隐藏默认列表符号*/	
+}
+#menu ul li{
+	background:#FFFF99;
+	height: 26px;
+ 	line-height: 26px; /*行距*/
+	text-align:center;
+	border-bottom: 0px solid #999; 	
+	position:relative;
+}
+a{
+	display:block; 
+	font-size: 13px;
+	color:#000000;
+	text-decoration: none;/*隐藏超链接默认下划线*/ 	
+}
+a:hover{
+	color: #F00;
+	font-size: 14px;
+}
+#menu ul li ul{
+	display:none; /*默认隐藏*/
+	top: 0px;
+	width:200px; 
+	border:0px solid #ccc; 
+	border-bottom:none;
+    position:absolute; 
+	left: 190px;	
+}
+#menu ul li:hover ul{
+    display:block;
+}
+#menu ul li:hover ul li a{
+	display:block;
+}
+</style>
+</head>
+
+<body>
+
+
+
+<table width="929" border="0" cellpadding="1">
+  <tr>
+    <td width="212" height="223"> <img src="images/d.jpg" width="200px" hight="200px"  /><div align="center"></div>
+<p><div class="mp-container-right"><div class="mp-today"><p class="mp-today-cn">现在时间：<span style="font-weight:bold"><span class='wgTimeClock' id='+8,M月d日(周D) hh:mm,日,一,二,三,四,五,六'></span></span></p><p>
+</p>
+
+
+<!--纵向列表-->
+
+
+<p><a>热门页面</a></p>
+<div id="menu">   
+<ul>
+<li><a>当前活动</a>
+<ul><li><a href="" >蔬菜大减价</a></li>
+<li><a href="" >幸运转盘</a></li></ul></li>
+<li><a>新增产品<span style="padding-left:10px;"><span style="font-size:10px;color: #ffffff;background-color:red;padding-right: 4px;padding-left: 4px;border-radius: 3px;text-shadow: 0 0 2px rgb(0 0 0 / 40%);font-weight:bold">NEW</span></span></a>
+<ul><li><a href="" >**品牌躺椅</a></li>
+<li><a href="" >**品牌电视</a></li>
+<li><a href="" >**品牌食物</a></li></ul></li>
+<li><a href="" >货物一览</a></li></ul>
+</div>
+<p>菜单</p>
+<div id="menu">  
+<ul><li><a >通用</a>
+<ul>
+<li><a href="" >产品一览</a></li>
+<li><a href="" >存货查看</a></li>
+<li><a href="" >产品预告</a></li>
+<li><a href="" >活动预告</a></li>
+</ul></li>
+<li><a>产品档案</a>
+<ul>
+<li><a href="" >零食一览</a></li>
+<li><a href="" >农产品一览</a></li>
+<li><a href="" >肉类一览</a></li>
+<li><a href="" >海鲜一览</a></li>
+<li><a href="" >日用品一览</a></li>
+<li><a href="" >电器一览</a></li>
+<li><a href="" >服装一览</a></li>
+</ul></li>
+<li><a>趣味</a>
+<ul>
+<li><a href="" >幸运转盘</a></li>
+<li><a href="" >采购模拟</a></li>
+<li><a href="" >衍生作品</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="menu">  
+<p>更多</p>
+<ul class="mooncell-link"></ul>
+<ul><li><a href="jianyi.html">意见建议</a>
+<li><a>友情链接</a>
+<ul>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="">植物百科wiki</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="">物流数据统计</a></li></ul></li></ul>
+</div></td>
+
+
+<!--横向列表-->
+
+
+    <td width="707"><table class="jdt">
+	 <tr>
+      <td height="32"><div id="menu2">    
+    <ul>
+        <li><a href="">首页</a></li>      
+        <li><a href="">购物</a> 
+         	<ul>
+                <li><a href="">筛选</a></li>
+                <li><a href="">搜索</a></li>
+                <li><a href="">购物车</a></li>
+                <li><a href="">售后</a></li>
+			</ul>
+        </li>
+        <li><a href="">每日推荐</a></li>
+        <li><a href="">活动</a></li>
+        <li><a href="zhuce.html">注册</a></li>
+		<li><a href="shiping.html">现场视频</a></li>
+    </ul>
+</div></td>
+    </tr>
+    <tr><td width="657" height="349">
+	<!--轮播-->
+        <script language="javascript" type="text/javascript">
+           
+            var _t1 = 0; 	
+            var _t2 = 3; 	
+            var _tnum = 3; 
+            var _tn = 1;	
+            var _tl =null;
+            _tt1 = setTimeout('change_img()',_t1*1000);
+
+            function change_img(){
+                setFocus(_tn);
+                _tt1 = setTimeout('change_img()',_t2*1000);
+            }
+            function setFocus(i){
+                if(i>_tnum){_tn=1;i=1;}
+                _tl?document.getElementById('focusPic'+_tl).style.display='none':'';
+                document.getElementById('focusPic'+i).style.display='block';
+                _tl=i;
+                _tn++;
+            }
+           
+        </script>
+ 
+        <div id="focusPic1">
+            <b href="#" >
+                <img src="images/a.jpg" width="780px" hight="700px" alt="果蔬区"  /></b>
+            <h2><b href="#" >果蔬区</b></h2>
+            <div class="index_page"><span onClick="javascript:setFocus(2);">点击切换</span>
+                <strong>1</strong>
+                <b href="javascript:setFocus(2);">2</b>
+                <b href="javascript:setFocus(3);">3</b>            </div>
+        </div>
+        
+        <div id="focusPic2" style="display:none;">
+            <b href="#">
+                <img src="images/b.jpg"width="780px" hight="700px" alt="海鲜区" /></b>
+            <h2><b href="#" >海鲜区</b></h2>
+            <div class="index_page"><span onClick="javascript:setFocus(3);">点击切换</span>
+                <b href="javascript:setFocus(1);">1</b>
+                <strong>2</strong>
+                <b href="javascript:setFocus(3);">3</b>            </div>
+        </div>
+      
+        <div id="focusPic3" style="display:none;">
+            <b href="#" >
+                <img src="images/c.jpg"width="780px" hight="700px" alt="电器区" />            </b>
+            <h2><b href="#" >电器区</b></h2>
+            <div class="index_page"><span onClick="javascript:setFocus(4);">点击切换</span>
+                <b href="javascript:setFocus(1);">1</b>
+                <b href="javascript:setFocus(2);">2</b>
+                <strong>3</strong>            </div>
+        </div>
+       
+    </td></tr>
+</table></td>
+  </tr>
+</table>
+
+</html>

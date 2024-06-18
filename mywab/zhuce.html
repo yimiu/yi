@@ -1,0 +1,160 @@
+<!--demo725.html-->
+<!DOCTYPE html>
+<head>
+<meta charset="gb2312" >
+<title>注册用户</title>
+<style type="text/css">
+body{
+	font-size:12px;
+}
+table {
+	margin:0 auto;
+	width:600px;
+	border-collapse:collapse;
+	border:1px solid black;
+}
+table td{
+	border:1px solid black;
+}
+td:first-child {
+	width:100px;
+}
+
+</style>
+<script language="javascript">
+<!--
+   function  validateForm(){
+	   if(checkName()&&checkEmail()&&checkLoginName()&&checkPassword())
+		   return true;
+		else
+			return false;
+   }
+	//验证姓名
+   function checkName() {
+	   var strName=document.fr.txtName.value;
+    	if (strName.length==0) {
+			alert("用户名不能为空!");
+			document.fr.txtName.focus();
+			return false;
+		}
+		else	
+	     	for(i=0;i<strName.length;i++) {
+				str=strName.substring(i,i+1);
+                if(str>="0"&&str<="9") {
+					alert("名字中不能包含数字");
+		          	document.fr.txtName.focus();
+		           	return false;
+				}
+		    }
+		return true;				
+	}
+	//验证登陆名
+	function checkLoginName() {
+		var strLoginName=document.fr.loginName.value;
+		if (strLoginName.length==0) {
+			alert("用户登陆名不能为空!");
+			document.fr.loginName.focus();
+			return false;
+		}
+		else	
+			 for(i=0;i<strLoginName.length;i++) {
+				str1=strLoginName.substring(i,i+1);
+				if(!((str1>="0"&&str1<="9")||(str1>="a"&&str1<="z")||(str1=="_"))) {
+					alert("登陆名字中不能包含特殊字符");
+					document.fr.loginName.focus();
+					return false;
+				}
+			}
+		return true;				
+	}
+	//验证email
+   function checkEmail() {
+	   var strEmail=document.fr.txtEmail.value;
+    	if (strEmail.length==0) {
+			alert("电子邮件不能为空！！！");
+	    	return false;
+		}
+    	if (strEmail.indexOf("@",0)==-1) {
+			alert("电子邮件必须包括@");
+	     	return false;
+		}	 
+    	if (strEmail.indexOf(".",0)==-1) {
+			alert("电子邮件必须包括.");
+	    	return false;
+		}	
+	return true;
+   }
+   //验证密码
+   function checkPassword()  {
+		var password=document.fr.txtPassword.value;
+		var rpassword=document.fr.txtRePassword.value;
+		if((password.length==0)||(rpassword.length==0)) {
+			alert("密码不能为空");
+			document.fr.txtPassword.focus();
+			return false;
+		 }
+		 else if(password.length<6) {
+				alert("密码少于6位");
+		    	document.fr.txtPassword.focus();
+		     	return false;
+		}
+	     else
+		     for(i=0;i<password.length;i++) { 
+			 	str2=password.substring(i,i+1);
+			     if(!((str2>="0"&&str2<="9")||(str2>="a"&&str2<="z")||(str2>="A"&&str2<="Z")))  {
+					 alert("密码中有非法字符");
+		             document.fr.txtPassword.focus();
+		             return false;
+			 		}
+		     }
+	 	if (password!=rpassword) { 
+			alert("密码不相符!!");
+			document.fr.txtPassword.focus();
+			return false;
+	   	}
+	return true;
+   }
+-->
+</script>
+</head>
+<body>
+    <form name="fr" method="post" action="" onSubmit="return validateForm()">
+    <table>
+        <tr style="background-color:#ccc">
+        	<td colspan="2" style=" font:bolder 18pt '楷体';text-align:center;">用 户 注 册</td>
+        </tr>
+        <tr>
+        	<td>真实姓名:</td>
+            <td><input type="text" name="txtName" />（不能为空，不能包含数字字符）</td>
+        </tr>
+        <tr>
+        	<td>电子邮件：</td>
+            <td><input type="email" name="txtEmail" />（必须包含@和.）</td>
+        </tr>
+        <tr>
+        	<td>登录名:</td>
+            <td><input type="text" name="loginName" />（可包含 a-z、0-9 和下划线）</td>
+        </tr>
+        <tr>
+        	<td>密码:</td>
+            <td><input type="password" name="txtPassword" />（不能为空，不能少于6个字符，只能包含数字和字母）</td>
+        </tr>
+        <tr>
+        	<td>密码确认</td>
+            <td><input type="password" name="txtRePassword" />(与上面密码一致)</td>
+         </tr>
+        <tr style="background-color:#ccc">
+        	<td><input name="reset" type="reset" value="重置" /></td>
+        	<td><input type="submit" value="提交" /></td>	
+      </tr>
+    </table>
+    </form>
+	<form method="get" action="main.html">
+	<table>
+	  <tr>
+        	<td><button type="submit">返回</button></form></td>
+      </tr>
+	  
+	  </table>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!--demo0712.html-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="gb2312" >
+<title>商品评级</title>
+  <style type="text/css">
+    * {
+		font-family: Tahoma;
+		font-size: 12pt;
+		text-align: left;
+	}
+    body {
+		margin: 30px;
+		text-align:center;
+	}
+    div#vote {		/*投票区域设置*/
+       top: 50px;
+       left: 50px;
+       width: 400px;
+       background-color:#cccccc;
+    }
+	#advise {
+		font-size:10pt;
+	  	color: #333;
+	}
+    #img1, #img2, #img3, #img4, #img5 {		/*鼠标移动到投票处指针形状*/
+      cursor: pointer;
+    }
+  </style>
+  <script type="text/javascript">
+    var score = 3;				// 默认评分为3分
+	var flag=false;				//提交标识
+    function setScore(score) {	 // 设置评分状态
+      if (flag==true) return;
+	  
+	  for (var i = 1;i <= 5; i++) {
+          	var img = document.getElementById("img" + String(i)); 
+   			// 根据评分值设置显示的图片
+        	img.src = (i <= score) ? "images/star1.gif" : "images/star0.gif";
+      }
+    }
+    function commitScore(s) { // 保存评分结果
+		score = s;
+		flag=true;
+    }
+    // 恢复到最后一次评分结果的状态
+    function resetScore() {
+      	setScore(score);
+    }
+  </script>
+</head>
+<body>
+
+  <div id="vote">
+     <div align="center">网页等级评价：
+       <img src="images/star1.gif" id="img1" alt="1" onMouseOver="setScore(1)" onClick="commitScore(1)" onMouseOut="resetScore()"/>
+       <img src="images/star1.gif" id="img2" alt="2" onMouseOver="setScore(2)" onClick="commitScore(2)" onMouseOut="resetScore()" />
+       <img src="images/star1.gif" id="img3" onMouseOver="setScore(3)" onClick="commitScore(3)" onMouseOut="resetScore()" alt="3"/>
+       <img src="images/star0.gif" id="img4" onMouseOver="setScore(4)" onClick="commitScore(4)" onMouseOut="resetScore()" alt="4"/>
+       <img src="images/star0.gif" id="img5" onMouseOver="setScore(5)" onClick="commitScore(5)" onMouseOut="resetScore()" alt="5"/>
+       <table style="width:300px; padding:0; background-color:#FFF;" >
+		<tr> 
+			<td height="122"><img src="images/e.jpg" style="width:90px; height:90px;" />         	</td>
+   			<td>
+  			<textarea id="advise"  style="width:300px; height:120px">亲，写点什么吧，你的意见对我们升级网页是很有帮助的。</textarea>		  </td>
+   		</tr>
+       </table>
+	  <button >提交</button>
+	  <form method="get" action="main.html">
+	  <button type="submit">返回</button></form>
+     </div>
+  </div>
+</body>
+</html>
