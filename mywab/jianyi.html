@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta  charset="gb2312" >
-<title>ÉÌÆ·ÆÀ¼¶</title>
+<meta  charset="utf-8" >
+<title>å•†å“è¯„çº§</title>
   <style type="text/css">
     * {
 		font-family: Tahoma;
@@ -14,7 +14,7 @@
 		margin: 30px;
 		text-align:center;
 	}
-    div#vote {		/*Í¶Æ±ÇøÓòÉèÖÃ*/
+    div#vote {		/*æŠ•ç¥¨åŒºåŸŸè®¾ç½®*/
        top: 50px;
        left: 50px;
        width: 400px;
@@ -24,27 +24,27 @@
 		font-size:10pt;
 	  	color: #333;
 	}
-    #img1, #img2, #img3, #img4, #img5 {		/*Êó±êÒÆ¶¯µ½Í¶Æ±´¦Ö¸ÕëĞÎ×´*/
+    #img1, #img2, #img3, #img4, #img5 {		/*é¼ æ ‡ç§»åŠ¨åˆ°æŠ•ç¥¨å¤„æŒ‡é’ˆå½¢çŠ¶*/
       cursor: pointer;
     }
   </style>
   <script type="text/javascript">
-    var score = 3;				// Ä¬ÈÏÆÀ·ÖÎª3·Ö
-	var flag=false;				//Ìá½»±êÊ¶
-    function setScore(score) {	 // ÉèÖÃÆÀ·Ö×´Ì¬
+    var score = 3;				// é»˜è®¤è¯„åˆ†ä¸º3åˆ†
+	var flag=false;				//æäº¤æ ‡è¯†
+    function setScore(score) {	 // è®¾ç½®è¯„åˆ†çŠ¶æ€
       if (flag==true) return;
 	  
 	  for (var i = 1;i <= 5; i++) {
           	var img = document.getElementById("img" + String(i)); 
-   			// ¸ù¾İÆÀ·ÖÖµÉèÖÃÏÔÊ¾µÄÍ¼Æ¬
+   			// æ ¹æ®è¯„åˆ†å€¼è®¾ç½®æ˜¾ç¤ºçš„å›¾ç‰‡
         	img.src = (i <= score) ? "images/star1.gif" : "images/star0.gif";
       }
     }
-    function commitScore(s) { // ±£´æÆÀ·Ö½á¹û
+    function commitScore(s) { // ä¿å­˜è¯„åˆ†ç»“æœ
 		score = s;
 		flag=true;
     }
-    // »Ö¸´µ½×îºóÒ»´ÎÆÀ·Ö½á¹ûµÄ×´Ì¬
+    // æ¢å¤åˆ°æœ€åä¸€æ¬¡è¯„åˆ†ç»“æœçš„çŠ¶æ€
     function resetScore() {
       	setScore(score);
     }
@@ -53,7 +53,7 @@
 <body>
 
   <div id="vote">
-     <div align="center">ÍøÒ³µÈ¼¶ÆÀ¼Û£º
+     <div align="center">ç½‘é¡µç­‰çº§è¯„ä»·ï¼š
        <img src="images/star1.gif" id="img1" alt="1" onMouseOver="setScore(1)" onClick="commitScore(1)" onMouseOut="resetScore()"/>
        <img src="images/star1.gif" id="img2" alt="2" onMouseOver="setScore(2)" onClick="commitScore(2)" onMouseOut="resetScore()" />
        <img src="images/star1.gif" id="img3" onMouseOver="setScore(3)" onClick="commitScore(3)" onMouseOut="resetScore()" alt="3"/>
@@ -63,12 +63,12 @@
 		<tr> 
 			<td height="122"><img src="images/e.jpg" style="width:90px; height:90px;" />         	</td>
    			<td>
-  			<textarea id="advise"  style="width:300px; height:120px">Ç×£¬Ğ´µãÊ²Ã´°É£¬ÄãµÄÒâ¼û¶ÔÎÒÃÇÉı¼¶ÍøÒ³ÊÇºÜÓĞ°ïÖúµÄ¡£</textarea>		  </td>
+  			<textarea id="advise"  style="width:300px; height:120px">äº²ï¼Œå†™ç‚¹ä»€ä¹ˆå§ï¼Œä½ çš„æ„è§å¯¹æˆ‘ä»¬å‡çº§ç½‘é¡µæ˜¯å¾ˆæœ‰å¸®åŠ©çš„ã€‚</textarea>		  </td>
    		</tr>
        </table>
-	  <button >Ìá½»</button>
+	  <button >æäº¤</button>
 	  <form method="get" action="main.html">
-	  <button type="submit">·µ»Ø</button></form>
+	  <button type="submit">è¿”å›</button></form>
      </div>
   </div>
 </body>
