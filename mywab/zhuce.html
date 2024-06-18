@@ -1,8 +1,8 @@
 <!--demo725.html-->
 <!DOCTYPE html>
 <head>
-<meta charset="gb2312" >
-<title>×¢²áÓÃ»§</title>
+<meta charset="utf-8" >
+<title>æ³¨å†Œç”¨æˆ·</title>
 <style type="text/css">
 body{
 	font-size:12px;
@@ -29,11 +29,11 @@ td:first-child {
 		else
 			return false;
    }
-	//ÑéÖ¤ÐÕÃû
+	//éªŒè¯å§“å
    function checkName() {
 	   var strName=document.fr.txtName.value;
     	if (strName.length==0) {
-			alert("ÓÃ»§Ãû²»ÄÜÎª¿Õ!");
+			alert("ç”¨æˆ·åä¸èƒ½ä¸ºç©º!");
 			document.fr.txtName.focus();
 			return false;
 		}
@@ -41,18 +41,18 @@ td:first-child {
 	     	for(i=0;i<strName.length;i++) {
 				str=strName.substring(i,i+1);
                 if(str>="0"&&str<="9") {
-					alert("Ãû×ÖÖÐ²»ÄÜ°üº¬Êý×Ö");
+					alert("åå­—ä¸­ä¸èƒ½åŒ…å«æ•°å­—");
 		          	document.fr.txtName.focus();
 		           	return false;
 				}
 		    }
 		return true;				
 	}
-	//ÑéÖ¤µÇÂ½Ãû
+	//éªŒè¯ç™»é™†å
 	function checkLoginName() {
 		var strLoginName=document.fr.loginName.value;
 		if (strLoginName.length==0) {
-			alert("ÓÃ»§µÇÂ½Ãû²»ÄÜÎª¿Õ!");
+			alert("ç”¨æˆ·ç™»é™†åä¸èƒ½ä¸ºç©º!");
 			document.fr.loginName.focus();
 			return false;
 		}
@@ -60,41 +60,41 @@ td:first-child {
 			 for(i=0;i<strLoginName.length;i++) {
 				str1=strLoginName.substring(i,i+1);
 				if(!((str1>="0"&&str1<="9")||(str1>="a"&&str1<="z")||(str1=="_"))) {
-					alert("µÇÂ½Ãû×ÖÖÐ²»ÄÜ°üº¬ÌØÊâ×Ö·û");
+					alert("ç™»é™†åå­—ä¸­ä¸èƒ½åŒ…å«ç‰¹æ®Šå­—ç¬¦");
 					document.fr.loginName.focus();
 					return false;
 				}
 			}
 		return true;				
 	}
-	//ÑéÖ¤email
+	//éªŒè¯email
    function checkEmail() {
 	   var strEmail=document.fr.txtEmail.value;
     	if (strEmail.length==0) {
-			alert("µç×ÓÓÊ¼þ²»ÄÜÎª¿Õ£¡£¡£¡");
+			alert("ç”µå­é‚®ä»¶ä¸èƒ½ä¸ºç©ºï¼ï¼ï¼");
 	    	return false;
 		}
     	if (strEmail.indexOf("@",0)==-1) {
-			alert("µç×ÓÓÊ¼þ±ØÐë°üÀ¨@");
+			alert("ç”µå­é‚®ä»¶å¿…é¡»åŒ…æ‹¬@");
 	     	return false;
 		}	 
     	if (strEmail.indexOf(".",0)==-1) {
-			alert("µç×ÓÓÊ¼þ±ØÐë°üÀ¨.");
+			alert("ç”µå­é‚®ä»¶å¿…é¡»åŒ…æ‹¬.");
 	    	return false;
 		}	
 	return true;
    }
-   //ÑéÖ¤ÃÜÂë
+   //éªŒè¯å¯†ç 
    function checkPassword()  {
 		var password=document.fr.txtPassword.value;
 		var rpassword=document.fr.txtRePassword.value;
 		if((password.length==0)||(rpassword.length==0)) {
-			alert("ÃÜÂë²»ÄÜÎª¿Õ");
+			alert("å¯†ç ä¸èƒ½ä¸ºç©º");
 			document.fr.txtPassword.focus();
 			return false;
 		 }
 		 else if(password.length<6) {
-				alert("ÃÜÂëÉÙÓÚ6Î»");
+				alert("å¯†ç å°‘äºŽ6ä½");
 		    	document.fr.txtPassword.focus();
 		     	return false;
 		}
@@ -102,13 +102,13 @@ td:first-child {
 		     for(i=0;i<password.length;i++) { 
 			 	str2=password.substring(i,i+1);
 			     if(!((str2>="0"&&str2<="9")||(str2>="a"&&str2<="z")||(str2>="A"&&str2<="Z")))  {
-					 alert("ÃÜÂëÖÐÓÐ·Ç·¨×Ö·û");
+					 alert("å¯†ç ä¸­æœ‰éžæ³•å­—ç¬¦");
 		             document.fr.txtPassword.focus();
 		             return false;
 			 		}
 		     }
 	 	if (password!=rpassword) { 
-			alert("ÃÜÂë²»Ïà·û!!");
+			alert("å¯†ç ä¸ç›¸ç¬¦!!");
 			document.fr.txtPassword.focus();
 			return false;
 	   	}
@@ -121,38 +121,38 @@ td:first-child {
     <form name="fr" method="post" action="" onSubmit="return validateForm()">
     <table>
         <tr style="background-color:#ccc">
-        	<td colspan="2" style=" font:bolder 18pt '¿¬Ìå';text-align:center;">ÓÃ »§ ×¢ ²á</td>
+        	<td colspan="2" style=" font:bolder 18pt 'æ¥·ä½“';text-align:center;">ç”¨ æˆ· æ³¨ å†Œ</td>
         </tr>
         <tr>
-        	<td>ÕæÊµÐÕÃû:</td>
-            <td><input type="text" name="txtName" />£¨²»ÄÜÎª¿Õ£¬²»ÄÜ°üº¬Êý×Ö×Ö·û£©</td>
+        	<td>çœŸå®žå§“å:</td>
+            <td><input type="text" name="txtName" />ï¼ˆä¸èƒ½ä¸ºç©ºï¼Œä¸èƒ½åŒ…å«æ•°å­—å­—ç¬¦ï¼‰</td>
         </tr>
         <tr>
-        	<td>µç×ÓÓÊ¼þ£º</td>
-            <td><input type="email" name="txtEmail" />£¨±ØÐë°üº¬@ºÍ.£©</td>
+        	<td>ç”µå­é‚®ä»¶ï¼š</td>
+            <td><input type="email" name="txtEmail" />ï¼ˆå¿…é¡»åŒ…å«@å’Œ.ï¼‰</td>
         </tr>
         <tr>
-        	<td>µÇÂ¼Ãû:</td>
-            <td><input type="text" name="loginName" />£¨¿É°üº¬ a-z¡¢0-9 ºÍÏÂ»®Ïß£©</td>
+        	<td>ç™»å½•å:</td>
+            <td><input type="text" name="loginName" />ï¼ˆå¯åŒ…å« a-zã€0-9 å’Œä¸‹åˆ’çº¿ï¼‰</td>
         </tr>
         <tr>
-        	<td>ÃÜÂë:</td>
-            <td><input type="password" name="txtPassword" />£¨²»ÄÜÎª¿Õ£¬²»ÄÜÉÙÓÚ6¸ö×Ö·û£¬Ö»ÄÜ°üº¬Êý×ÖºÍ×ÖÄ¸£©</td>
+        	<td>å¯†ç :</td>
+            <td><input type="password" name="txtPassword" />ï¼ˆä¸èƒ½ä¸ºç©ºï¼Œä¸èƒ½å°‘äºŽ6ä¸ªå­—ç¬¦ï¼Œåªèƒ½åŒ…å«æ•°å­—å’Œå­—æ¯ï¼‰</td>
         </tr>
         <tr>
-        	<td>ÃÜÂëÈ·ÈÏ</td>
-            <td><input type="password" name="txtRePassword" />(ÓëÉÏÃæÃÜÂëÒ»ÖÂ)</td>
+        	<td>å¯†ç ç¡®è®¤</td>
+            <td><input type="password" name="txtRePassword" />(ä¸Žä¸Šé¢å¯†ç ä¸€è‡´)</td>
          </tr>
         <tr style="background-color:#ccc">
-        	<td><input name="reset" type="reset" value="ÖØÖÃ" /></td>
-        	<td><input type="submit" value="Ìá½»" /></td>	
+        	<td><input name="reset" type="reset" value="é‡ç½®" /></td>
+        	<td><input type="submit" value="æäº¤" /></td>	
       </tr>
     </table>
     </form>
 	<form method="get" action="main.html">
 	<table>
 	  <tr>
-        	<td><button type="submit">·µ»Ø</button></form></td>
+        	<td><button type="submit">è¿”å›ž</button></form></td>
       </tr>
 	  
 	  </table>
