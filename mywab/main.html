@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>ÈÕÓÃ°Ù»õ</title>
-<!--¼ÆËãÊ±¼ä-->
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+<title>æ—¥ç”¨ç™¾è´§</title>
+<!--è®¡ç®—æ—¶é—´-->
 <script>document.addEventListener("DOMContentLoaded",function () {CountDownShort();var i =window.setInterval(function () {if (new Date().getSeconds() ==0) {window.clearInterval(i);CountDownShort();window.setInterval(CountDownShort,60000);}
 },1000);});function CountDownShort() {var a =document.getElementsByClassName("CDScontainer");if (a.length ==0) {return;}
-var ct =new Date().getTime() / 1000;for (var i =0;i<a.length;i++) {var s =parseInt(a[i].getAttribute("data-time"),10);if (s >ct) {var delta =s - ct;var t ="";if (delta >86400) {t +=Math.floor(delta / 86400) + "Ìì";delta =delta % 86400;}
-if (delta >3600) {t +=Math.floor(delta / 3600) + "Ğ¡Ê±";delta =delta % 3600;}
-if (delta >60) {t +=Math.floor(delta / 60) + "·ÖÖÓ";}
+var ct =new Date().getTime() / 1000;for (var i =0;i<a.length;i++) {var s =parseInt(a[i].getAttribute("data-time"),10);if (s >ct) {var delta =s - ct;var t ="";if (delta >86400) {t +=Math.floor(delta / 86400) + "å¤©";delta =delta % 86400;}
+if (delta >3600) {t +=Math.floor(delta / 3600) + "å°æ—¶";delta =delta % 3600;}
+if (delta >60) {t +=Math.floor(delta / 60) + "åˆ†é’Ÿ";}
 a[i].innerHTML =t;} else {if (a[i].innerHTML !="") {a[i].innerHTML ="";}
 }
 }
@@ -28,7 +28,7 @@ clockArray[i].id.split(",")[0] *60 *60 *1000
 ).Format(clockArray[i].id.split(","));}
 }</script>
 
-<!--ÂÖ²¥css-->
+<!--è½®æ’­css-->
 <style>
     *{
     margin:3px;
@@ -39,7 +39,7 @@ clockArray[i].id.split(",")[0] *60 *60 *1000
 	font-size:12px;
 	color:#333333;
 	text-align:center;
-	font-family:'ËÎÌå',arial,verdana,sans-serif;
+	font-family:'å®‹ä½“',arial,verdana,sans-serif;
 	margin-top: 8px;
 	background-color: #FFCC00;
     }
@@ -99,7 +99,7 @@ clockArray[i].id.split(",")[0] *60 *60 *1000
 </style>
 
 
-<!--ºáÏòÁĞ±í-->
+<!--æ¨ªå‘åˆ—è¡¨-->
 
 
 <!DOCTYPE html>
@@ -116,12 +116,12 @@ clockArray[i].id.split(",")[0] *60 *60 *1000
 #menu2 ul{
 	margin: 0px; 
 	padding: 0px; 
-	list-style: none; /*Òş²ØÄ¬ÈÏÁĞ±í·ûºÅ*/	
+	list-style: none; /*éšè—é»˜è®¤åˆ—è¡¨ç¬¦å·*/	
 }
 #menu2 ul li{
 	background:#FFFF99;
 	height: 26px;
- 	line-height: 26px; /*ĞĞ¾à*/
+ 	line-height: 26px; /*è¡Œè·*/
 	text-align:center;
 	border-right: 0px solid #999; 	
 	position:relative;
@@ -132,14 +132,14 @@ a{
 	display:block; 
 	font-size: 13px;
 	color: #FFF;
-	text-decoration: none;/*Òş²Ø³¬Á´½ÓÄ¬ÈÏÏÂ»®Ïß*/ 	
+	text-decoration: none;/*éšè—è¶…é“¾æ¥é»˜è®¤ä¸‹åˆ’çº¿*/ 	
 }
 a:hover{
 	color: #F00;
 	font-size: 14px;
 }
 #menu2 ul li ul{
-	display:none; /*Ä¬ÈÏÒş²Ø*/
+	display:none; /*é»˜è®¤éšè—*/
 	top: 26px;
 	width:100px; 
 	border:0px solid #ccc; 
@@ -155,7 +155,7 @@ a:hover{
 }
 
 
-<!--×İÏòÁĞ±í-->
+<!--çºµå‘åˆ—è¡¨-->
 
 
 </style>
@@ -167,12 +167,12 @@ a:hover{
 #menu ul{
 	margin: 0px; 
 	padding: 0px; 
-	list-style: none; /*Òş²ØÄ¬ÈÏÁĞ±í·ûºÅ*/	
+	list-style: none; /*éšè—é»˜è®¤åˆ—è¡¨ç¬¦å·*/	
 }
 #menu ul li{
 	background:#FFFF99;
 	height: 26px;
- 	line-height: 26px; /*ĞĞ¾à*/
+ 	line-height: 26px; /*è¡Œè·*/
 	text-align:center;
 	border-bottom: 0px solid #999; 	
 	position:relative;
@@ -181,14 +181,14 @@ a{
 	display:block; 
 	font-size: 13px;
 	color:#000000;
-	text-decoration: none;/*Òş²Ø³¬Á´½ÓÄ¬ÈÏÏÂ»®Ïß*/ 	
+	text-decoration: none;/*éšè—è¶…é“¾æ¥é»˜è®¤ä¸‹åˆ’çº¿*/ 	
 }
 a:hover{
 	color: #F00;
 	font-size: 14px;
 }
 #menu ul li ul{
-	display:none; /*Ä¬ÈÏÒş²Ø*/
+	display:none; /*é»˜è®¤éšè—*/
 	top: 0px;
 	width:200px; 
 	border:0px solid #ccc; 
@@ -212,88 +212,88 @@ a:hover{
 <table width="929" border="0" cellpadding="1">
   <tr>
     <td width="212" height="223"> <img src="images/d.jpg" width="200px" hight="200px"  /><div align="center"></div>
-<p><div class="mp-container-right"><div class="mp-today"><p class="mp-today-cn">ÏÖÔÚÊ±¼ä£º<span style="font-weight:bold"><span class='wgTimeClock' id='+8,MÔÂdÈÕ(ÖÜD) hh:mm,ÈÕ,Ò»,¶ş,Èı,ËÄ,Îå,Áù'></span></span></p><p>
+<p><div class="mp-container-right"><div class="mp-today"><p class="mp-today-cn">ç°åœ¨æ—¶é—´ï¼š<span style="font-weight:bold"><span class='wgTimeClock' id='+8,Mæœˆdæ—¥(å‘¨D) hh:mm,æ—¥,ä¸€,äºŒ,ä¸‰,å››,äº”,å…­'></span></span></p><p>
 </p>
 
 
-<!--×İÏòÁĞ±í-->
+<!--çºµå‘åˆ—è¡¨-->
 
 
-<p><a>ÈÈÃÅÒ³Ãæ</a></p>
+<p><a>çƒ­é—¨é¡µé¢</a></p>
 <div id="menu">   
 <ul>
-<li><a>µ±Ç°»î¶¯</a>
-<ul><li><a href="" >Êß²Ë´ó¼õ¼Û</a></li>
-<li><a href="" >ĞÒÔË×ªÅÌ</a></li></ul></li>
-<li><a>ĞÂÔö²úÆ·<span style="padding-left:10px;"><span style="font-size:10px;color: #ffffff;background-color:red;padding-right: 4px;padding-left: 4px;border-radius: 3px;text-shadow: 0 0 2px rgb(0 0 0 / 40%);font-weight:bold">NEW</span></span></a>
-<ul><li><a href="" >**Æ·ÅÆÌÉÒÎ</a></li>
-<li><a href="" >**Æ·ÅÆµçÊÓ</a></li>
-<li><a href="" >**Æ·ÅÆÊ³Îï</a></li></ul></li>
-<li><a href="" >»õÎïÒ»ÀÀ</a></li></ul>
+<li><a>å½“å‰æ´»åŠ¨</a>
+<ul><li><a href="" >è”¬èœå¤§å‡ä»·</a></li>
+<li><a href="" >å¹¸è¿è½¬ç›˜</a></li></ul></li>
+<li><a>æ–°å¢äº§å“<span style="padding-left:10px;"><span style="font-size:10px;color: #ffffff;background-color:red;padding-right: 4px;padding-left: 4px;border-radius: 3px;text-shadow: 0 0 2px rgb(0 0 0 / 40%);font-weight:bold">NEW</span></span></a>
+<ul><li><a href="" >**å“ç‰Œèººæ¤…</a></li>
+<li><a href="" >**å“ç‰Œç”µè§†</a></li>
+<li><a href="" >**å“ç‰Œé£Ÿç‰©</a></li></ul></li>
+<li><a href="" >è´§ç‰©ä¸€è§ˆ</a></li></ul>
 </div>
-<p>²Ëµ¥</p>
+<p>èœå•</p>
 <div id="menu">  
-<ul><li><a >Í¨ÓÃ</a>
+<ul><li><a >é€šç”¨</a>
 <ul>
-<li><a href="" >²úÆ·Ò»ÀÀ</a></li>
-<li><a href="" >´æ»õ²é¿´</a></li>
-<li><a href="" >²úÆ·Ô¤¸æ</a></li>
-<li><a href="" >»î¶¯Ô¤¸æ</a></li>
+<li><a href="" >äº§å“ä¸€è§ˆ</a></li>
+<li><a href="" >å­˜è´§æŸ¥çœ‹</a></li>
+<li><a href="" >äº§å“é¢„å‘Š</a></li>
+<li><a href="" >æ´»åŠ¨é¢„å‘Š</a></li>
 </ul></li>
-<li><a>²úÆ·µµ°¸</a>
+<li><a>äº§å“æ¡£æ¡ˆ</a>
 <ul>
-<li><a href="" >ÁãÊ³Ò»ÀÀ</a></li>
-<li><a href="" >Å©²úÆ·Ò»ÀÀ</a></li>
-<li><a href="" >ÈâÀàÒ»ÀÀ</a></li>
-<li><a href="" >º£ÏÊÒ»ÀÀ</a></li>
-<li><a href="" >ÈÕÓÃÆ·Ò»ÀÀ</a></li>
-<li><a href="" >µçÆ÷Ò»ÀÀ</a></li>
-<li><a href="" >·ş×°Ò»ÀÀ</a></li>
+<li><a href="" >é›¶é£Ÿä¸€è§ˆ</a></li>
+<li><a href="" >å†œäº§å“ä¸€è§ˆ</a></li>
+<li><a href="" >è‚‰ç±»ä¸€è§ˆ</a></li>
+<li><a href="" >æµ·é²œä¸€è§ˆ</a></li>
+<li><a href="" >æ—¥ç”¨å“ä¸€è§ˆ</a></li>
+<li><a href="" >ç”µå™¨ä¸€è§ˆ</a></li>
+<li><a href="" >æœè£…ä¸€è§ˆ</a></li>
 </ul></li>
-<li><a>È¤Î¶</a>
+<li><a>è¶£å‘³</a>
 <ul>
-<li><a href="" >ĞÒÔË×ªÅÌ</a></li>
-<li><a href="" >²É¹ºÄ£Äâ</a></li>
-<li><a href="" >ÑÜÉú×÷Æ·</a></li>
+<li><a href="" >å¹¸è¿è½¬ç›˜</a></li>
+<li><a href="" >é‡‡è´­æ¨¡æ‹Ÿ</a></li>
+<li><a href="" >è¡ç”Ÿä½œå“</a></li>
 </ul></li>
 </ul>
 </div>
 <div id="menu">  
-<p>¸ü¶à</p>
+<p>æ›´å¤š</p>
 <ul class="mooncell-link"></ul>
-<ul><li><a href="jianyi.html">Òâ¼û½¨Òé</a>
-<li><a>ÓÑÇéÁ´½Ó</a>
+<ul><li><a href="jianyi.html">æ„è§å»ºè®®</a>
+<li><a>å‹æƒ…é“¾æ¥</a>
 <ul>
-<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="">Ö²Îï°Ù¿Æwiki</a></li>
-<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="">ÎïÁ÷Êı¾İÍ³¼Æ</a></li></ul></li></ul>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="">æ¤ç‰©ç™¾ç§‘wiki</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="">ç‰©æµæ•°æ®ç»Ÿè®¡</a></li></ul></li></ul>
 </div></td>
 
 
-<!--ºáÏòÁĞ±í-->
+<!--æ¨ªå‘åˆ—è¡¨-->
 
 
     <td width="707"><table class="jdt">
 	 <tr>
       <td height="32"><div id="menu2">    
     <ul>
-        <li><a href="">Ê×Ò³</a></li>      
-        <li><a href="">¹ºÎï</a> 
+        <li><a href="">é¦–é¡µ</a></li>      
+        <li><a href="">è´­ç‰©</a> 
          	<ul>
-                <li><a href="">É¸Ñ¡</a></li>
-                <li><a href="">ËÑË÷</a></li>
-                <li><a href="">¹ºÎï³µ</a></li>
-                <li><a href="">ÊÛºó</a></li>
+                <li><a href="">ç­›é€‰</a></li>
+                <li><a href="">æœç´¢</a></li>
+                <li><a href="">è´­ç‰©è½¦</a></li>
+                <li><a href="">å”®å</a></li>
 			</ul>
         </li>
-        <li><a href="">Ã¿ÈÕÍÆ¼ö</a></li>
-        <li><a href="">»î¶¯</a></li>
-        <li><a href="zhuce.html">×¢²á</a></li>
-		<li><a href="shiping.html">ÏÖ³¡ÊÓÆµ</a></li>
+        <li><a href="">æ¯æ—¥æ¨è</a></li>
+        <li><a href="">æ´»åŠ¨</a></li>
+        <li><a href="zhuce.html">æ³¨å†Œ</a></li>
+		<li><a href="shiping.html">ç°åœºè§†é¢‘</a></li>
     </ul>
 </div></td>
     </tr>
     <tr><td width="657" height="349">
-	<!--ÂÖ²¥-->
+	<!--è½®æ’­-->
         <script language="javascript" type="text/javascript">
            
             var _t1 = 0; 	
@@ -319,9 +319,9 @@ a:hover{
  
         <div id="focusPic1">
             <b href="#" >
-                <img src="images/a.jpg" width="780px" hight="700px" alt="¹ûÊßÇø"  /></b>
-            <h2><b href="#" >¹ûÊßÇø</b></h2>
-            <div class="index_page"><span onClick="javascript:setFocus(2);">µã»÷ÇĞ»»</span>
+                <img src="images/a.jpg" width="780px" hight="700px" alt="æœè”¬åŒº"  /></b>
+            <h2><b href="#" >æœè”¬åŒº</b></h2>
+            <div class="index_page"><span onClick="javascript:setFocus(2);">ç‚¹å‡»åˆ‡æ¢</span>
                 <strong>1</strong>
                 <b href="javascript:setFocus(2);">2</b>
                 <b href="javascript:setFocus(3);">3</b>            </div>
@@ -329,9 +329,9 @@ a:hover{
         
         <div id="focusPic2" style="display:none;">
             <b href="#">
-                <img src="images/b.jpg"width="780px" hight="700px" alt="º£ÏÊÇø" /></b>
-            <h2><b href="#" >º£ÏÊÇø</b></h2>
-            <div class="index_page"><span onClick="javascript:setFocus(3);">µã»÷ÇĞ»»</span>
+                <img src="images/b.jpg"width="780px" hight="700px" alt="æµ·é²œåŒº" /></b>
+            <h2><b href="#" >æµ·é²œåŒº</b></h2>
+            <div class="index_page"><span onClick="javascript:setFocus(3);">ç‚¹å‡»åˆ‡æ¢</span>
                 <b href="javascript:setFocus(1);">1</b>
                 <strong>2</strong>
                 <b href="javascript:setFocus(3);">3</b>            </div>
@@ -339,9 +339,9 @@ a:hover{
       
         <div id="focusPic3" style="display:none;">
             <b href="#" >
-                <img src="images/c.jpg"width="780px" hight="700px" alt="µçÆ÷Çø" />            </b>
-            <h2><b href="#" >µçÆ÷Çø</b></h2>
-            <div class="index_page"><span onClick="javascript:setFocus(4);">µã»÷ÇĞ»»</span>
+                <img src="images/c.jpg"width="780px" hight="700px" alt="ç”µå™¨åŒº" />            </b>
+            <h2><b href="#" >ç”µå™¨åŒº</b></h2>
+            <div class="index_page"><span onClick="javascript:setFocus(4);">ç‚¹å‡»åˆ‡æ¢</span>
                 <b href="javascript:setFocus(1);">1</b>
                 <b href="javascript:setFocus(2);">2</b>
                 <strong>3</strong>            </div>
